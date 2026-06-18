@@ -1,0 +1,22 @@
+
+/* title */
+.contents_title_small_en { font-family: "Playfair Display", serif; font-size: 30px; font-weight: 500; letter-spacing: -1px; color: #333; }
+.contents_title_medium_en { font-family: "Sofia Sans Condensed", sans-serif; font-size: 37px; font-weight: 400; letter-spacing: -1px; color: #333; }
+.contents_title_xlarge_italic_en { font-family: "Playfair Display", serif; font-style: italic; font-size: 40px; font-weight: 400; letter-spacing: -1px; }
+.contents_title_xxlarge_en { font-family: "Playfair Display", serif; font-size: 60px; font-weight: 500; line-height: 100%; letter-spacing: -1px; color: #333; }
+.contents_title_xxxlarge_en { font-family: "Playfair Display", serif; font-size: 100px; font-weight: 500; }
+
+
+/* article */
+.contents_article_xsmall { font-size: 12px; font-weight: 300; letter-spacing: -0.5px; color: #333; }
+.contents_article_small_light { font-size: 14px; font-weight: 300; letter-spacing: -1px; color: #333; }
+.contents_article_small_bold { font-size: 14px; font-weight: 700; letter-spacing: -1px; }
+
+.contents_article_medium { font-size: 16px; font-weight: 500; letter-spacing: -1px; color: #333; }
+.contents_article_medium_light { font-size: 16px; font-weight: 300; line-height: 187%; letter-spacing: -0.7px; }
+.contents_article_medium_en { font-family: "Sofia Sans Condensed", sans-serif; font-size: 16px; }
+.contents_article_large { font-size: 24px; font-weight: 500; letter-spacing: -1px; color: #333; }
+
+/* wrap */
+.contents_title_wrap { margin-bottom: 15px; }
+.contents_title_wrap a { display: flex; gap: 12px; align-items: center; }
