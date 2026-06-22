@@ -1,0 +1,73 @@
+/* main_시작*/
+.main{ width: 100%; height: auto; margin: 0 auto; display: flex; }
+header { 
+    width: 100%; height: 84px; padding: 28px 40px; position: fixed; top: 0;
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+     z-index: 999; /* background-color: lightcoral; */ box-sizing: border-box;/* 패딩값을 안쪽에만 주고싶으면, 박스사이징 보더박스 설정해야함 */
+    }
+
+.heder_gnb_left { display:flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: center; }
+.heder_gnb_left img, .heder_gnb_right img { display: block; }
+/* .heder_gnb_left a { line-height: 0; } */
+.logo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);/* 자신의 크기 기준 설정 */ }
+.logo img { height: 100%;}
+
+.header_gnb_right { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 24px; align-items: center; justify-content: center;}
+
+.main_img_box{ width: 50%; height: 1080px; display: flex; align-items: center; justify-content: center; background: url(../images/main_img.jpg)no-repeat 50% 50% / cover; }
+
+.sub_img{ width: 290px; height: 381px; background: url(../images/sub_img.jpg) no-repeat 50% 50% / cover; z-index: 1; }
+
+.main_text_box { width: 50%; display: flex; flex-wrap: wrap; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 53px; }
+
+/* main_끝*/
+
+/* our_story 시작*/
+.our_story{ width: 100%; height: 1080px; margin: 0 auto; display: flex; flex-wrap: wrap; flex-direction: column;  align-items: center; justify-content: center; gap: 60px; background-color: #FDF5E6;}
+
+.our_story_box { width: 562px; display: flex; flex-wrap: wrap; flex-direction: column; text-align: center; gap: 18px; }
+
+.our_story_img { width: 562px; height: 285px; background: url(../images/our_story.jpg) no-repeat 50% 50% / cover;}
+
+.our_story .contents_article_medium { text-align: center; line-height: 160%; }
+
+.our_story_btn {
+    width: 202px; height: 46px; display: flex; justify-content: center; align-items: center;
+    background-color: #fff; border: 1px solid #EAEAEA; box-sizing: border-box;
+    font-size: 14px; font-weight: 400; letter-spacing: -0.5px; color: #333;
+    cursor: pointer; transition: .3s;
+}
+
+.our_story_btn:hover { background-color: #333; border-color: #333; color: #FDF5E6; }
+
+/* our_story 끝*/
+
+/* heritage 시작 */
+.heritage { width: 1600px; height: 656px; margin: 212px auto; display: flex; align-items: flex-end; position: relative; justify-content: space-between; box-sizing: border-box;}
+
+.heritage_text_box { width: 474px; height: 656px; display: flex; flex-direction: column; justify-content: space-between;  }
+
+.heritage .contents_title_xlarge_italic_en { color: #FFB800; }
+.heritage .contents_title_xlarge_italic_en span {
+    display: inline; 
+    box-decoration-break: clone; /* 3줄을 각각 쪼개서 개별로 인식 */
+    border-bottom: 1px solid #FFB800;
+    padding-bottom: 2px;
+}
+.heritage .contents_article_small_light { line-height: 160%;}
+
+
+/* 부모: 기준점 (가운데 정렬의 중심) */
+.heritage_img_wrap {  width: 855px; height: 394px; position: relative; }
+
+.heritage_img { width: 855px; height: 394px; display: block; }
+
+.heritage_img_wrap .arrow_box {
+    width: 814px; height: 19px;
+    display: flex; justify-content: space-between; align-items: center;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.heritage_img_wrap .arrow_left {  width: 10px; height: 19px; background: url(../images/arrow_left.png) no-repeat 50% 50% / cover; }
+.heritage_img_wrap .arrow_right {  width: 10px; height: 19px; background: url(../images/arrow_right.png) no-repeat 50% 50% / cover; }
