@@ -54,7 +54,7 @@ header {
     border-bottom: 1px solid #FFB800;
     padding-bottom: 2px;
 }
-.heritage .contents_article_small_light { line-height: 160%;}
+.heritage .contents_article_small_light { line-height: 160%; color: #333; }
 
 
 /* 부모: 기준점 (가운데 정렬의 중심) */
@@ -80,7 +80,7 @@ header {
 .ingredients_text_box { display: flex; flex-wrap: wrap; flex-direction: column; align-items: center; gap: 10px; }
 
 .ingredients_img_wrap { width: 100%; display: flex; flex-wrap: wrap; flex-direction: column; }
-.ingredients_img_box { width: 100%; height: 200px; padding: 0 24px 24px 0px; position: relative; overflow: hidden; display: flex; justify-content: flex-end; align-items: flex-end; }
+.ingredients_img_box { width: 100%; height: 200px; padding: 0 24px 24px 0px; position: relative; overflow: hidden; display: flex; justify-content: flex-end; align-items: flex-end; background-color: #000; }
 
 .ingredients_img_01, .ingredients_img_02, .ingredients_img_03, .ingredients_img_04 {
     width: 100%; height: 100%; position: absolute;
@@ -105,3 +105,60 @@ header {
 .contents_title_small_en, .contents_article_small_light { color: #fff; }
 
 /* ingredients 끝 */
+
+/* philosophy 시작 */
+
+.philosophy { width: 1600px; margin: 128px auto; display: flex; align-items: center; justify-content: space-between; }
+
+.philosophy_sub { width: 800px; height: auto;}
+
+.philosophy_text_wrap { display: flex; flex-wrap: wrap; flex-direction: column; gap: 28px; }
+
+.philosophy_text_box { width: 100%;  display: flex; flex-wrap: wrap; flex-direction: column; gap: 8px;}
+
+.philosophy .contents_article_small_light { line-height: 160%; color: #333;}
+
+/* philosophy 끝 */
+
+/* Our_Commitments 시작 */
+.Our_Commitments { width: 100%; min-height: 1080px; margin: 0 auto; padding: 238px 0; display: flex; 
+flex-direction: column; align-items: flex-start; box-sizing: border-box; gap: 80px; background-color: #FDF5E6; }
+
+.Commitments_text_wrap { width: 1600px; margin: 0 auto; display: flex; flex-direction: column;  padding: 0 79px; box-sizing: border-box; gap: 10px; }
+
+.commitments_img_wrap { width: 1600px; margin: 0 auto; padding: 0 79px; box-sizing: border-box; }
+
+
+.commitments_img_box { width: 247px; display: flex; flex-direction: column; gap: 16px; }
+
+.commitments_img_01, .commitments_img_02, .commitments_img_03, .commitments_img_04, .commitments_img_05, .commitments_img_06 { width: 100%; height: 328px; }
+
+
+.commitments_img_01 { background: url(../images/Commitments_img_01.jpg) no-repeat 50% 50% / cover ; }
+.commitments_img_02 { background: url(../images/Commitments_img_02.jpg) no-repeat 50% 50% / cover ; }
+.commitments_img_03 { background: url(../images/Commitments_img_03.jpg) no-repeat 50% 50% / cover ; }
+.commitments_img_04 { background: url(../images/Commitments_img_04.jpg) no-repeat 50% 50% / cover ; }
+.commitments_img_05 { background: url(../images/Commitments_img_05.jpg) no-repeat 50% 50% / cover ; }
+.commitments_img_06 { background: url(../images/Commitments_img_06.jpg) no-repeat 50% 50% / cover ; }
+
+.commitments_article_box { display: flex; flex-direction: column; gap: 4px; }
+
+
+/* 1. 회색 라인 (배경) */
+.progress-container { width: 470px; height: 2px; background-color: #d1d1d1; margin: 20px auto 0;
+position: relative; overflow: visible;  /* 바가 잘리지 않게 설정 */
+}
+
+/* 2. 노란색 바 (실제 움직이는 바) */
+.progress-bar-fill {
+    width: 140px;       /* 고정 길이 */
+    height: 2px;
+    background-color: #FFD700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 0.3s ease-out; /* 부드러운 움직임 */
+    z-index: 10;        /* 다른 요소 위로 오게 설정 */
+}
+/* Our_Commitments 끝  */
+

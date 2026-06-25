@@ -81,12 +81,42 @@ $(document).ready(function() {
     });
 });
 
+/* sub_Our_Commitments */    
+$(document).ready(function(){
+    var $owl = $(".commitments_img_wrap");
 
+    $owl.owlCarousel({
+        loop: true,           // 마우스로 계속 넘길 수 있게 설정
+        mouseDrag: true,      // 마우스 드래그 활성화
+        touchDrag: true,      // 터치 드래그 활성화
+        dots: false,          // 기본 도트 제거
+        items: 4,
+        margin: 96,
+        nav: false
+    });
 
+    // 1. 라인 생성
+    if (!$(".progress-container").length) {
+        $owl.after('<div class="progress-container"><div class="progress-bar-fill"></div></div>');
+    }
 
+    // 2. 바 위치 업데이트
+    $owl.on('changed.owl.carousel', function(event) {
+        if (!event.item) return;
+        
+        var total = event.item.count;
+        var active = event.item.index;
+        
+        // loop 사용 시 복제본(clone)으로 인해 인덱스가 꼬이는 것을 방지
+        // 실제 데이터 개수(total)를 기준으로 비율을 계산
+        var ratio = (active % total) / (total - 1);
+        
+        var maxLeft = 470 - 140; // 330px 이동
+        var newLeft = ratio * maxLeft;
 
-
-
+        $(".progress-bar-fill").css("left", newLeft + "px");
+    });
+});
 
 
 
