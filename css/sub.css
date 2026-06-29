@@ -3,8 +3,25 @@
 header { 
     width: 100%; height: 84px; padding: 28px 40px; position: fixed; top: 0;
     display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
-     z-index: 999; /* background-color: lightcoral; */ box-sizing: border-box;/* 패딩값을 안쪽에만 주고싶으면, 박스사이징 보더박스 설정해야함 */
-    }
+    z-index: 999; box-sizing: border-box;
+    background-color: transparent; 
+    /* 추가: 배경색 변화를 부드럽게 */
+    transition: background-color 0.4s ease;
+}
+
+header.scrolled {
+    /* 아주 연한 크림색 느낌의 배경 */
+    background-color: rgba(250, 248, 243, 0.85) !important; 
+    
+    /* 블러 효과로 답답함 제거 */
+    backdrop-filter: blur(8px);
+    
+    /* 그림자를 아주 은은하게 (너무 진하면 답답함) */
+    box-shadow: 0 4px 15px rgba(180, 160, 140, 0.1);
+    
+    /* 헤더 하단에 아주 얇은 라인을 넣어 정돈된 느낌 */
+    border-bottom: 1px solid rgba(180, 160, 140, 0.2);
+}
 
 .heder_gnb_left { display:flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: center; }
 .heder_gnb_left img, .heder_gnb_right img { display: block; }
@@ -19,6 +36,9 @@ header {
 .sub_img{ width: 290px; height: 381px; background: url(../images/sub_img.jpg) no-repeat 50% 50% / cover; z-index: 1; }
 
 .main_text_box { width: 50%; display: flex; flex-wrap: wrap; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 53px; }
+
+.main_text_box .contents_title_xxlarge_en {  line-height: 120%; }
+.main_text_box .contents_article_medium {  line-height: 160%; }
 
 /* main_끝*/
 
@@ -121,10 +141,10 @@ header {
 /* philosophy 끝 */
 
 /* Our_Commitments 시작 */
-.Our_Commitments { width: 100%; min-height: 1080px; margin: 0 auto; padding: 238px 0; display: flex; 
+.our_commitments { width: 100%; min-height: 1080px; margin: 0 auto; padding: 238px 0; display: flex; 
 flex-direction: column; align-items: flex-start; box-sizing: border-box; gap: 80px; background-color: #FDF5E6; }
 
-.Commitments_text_wrap { width: 1600px; margin: 0 auto; display: flex; flex-direction: column;  padding: 0 79px; box-sizing: border-box; gap: 10px; }
+.commitments_text_wrap { width: 1600px; margin: 0 auto; display: flex; flex-direction: column;  padding: 0 79px; box-sizing: border-box; gap: 10px; }
 
 .commitments_img_wrap { width: 1600px; margin: 0 auto; padding: 0 79px; box-sizing: border-box; }
 
@@ -160,5 +180,54 @@ position: relative; overflow: visible;  /* 바가 잘리지 않게 설정 */
     transition: left 0.3s ease-out; /* 부드러운 움직임 */
     z-index: 10;        /* 다른 요소 위로 오게 설정 */
 }
-/* Our_Commitments 끝  */
+/* our_Commitments 끝  */
+
+
+/* our_picks 시작 */
+
+.our_picks { width: 100%; height: 1080px; display: flex; flex-wrap: wrap; flex-direction: column; align-items: center; justify-content: center;  gap: 72px; }
+
+.our_picks_text_box { display: flex; flex-wrap: wrap; flex-direction: column; gap: 20px; text-align: center; }
+
+.our_picks_text_box .contents_title_xxlarge_en { color: #FFB800; }
+
+.our_pick_img_wrap {  display: flex; gap: 42px; }
+
+.our_pick_img { width: 410px; height: 517px; overflow: hidden;  position: relative; }
+
+.our_pick_img img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform 0.6s ease; }
+
+.our_pick_img p {   width: 100%;  position: absolute;  bottom: 20px; left: 0; text-align: center; color: #fff;  z-index: 10; pointer-events: none; }
+
+.our_pick_img:hover img { transform: scale(1.05); }
+
+.our_picks .contents_title_xlarge_italic_en { text-align: center; color: #FFB800; }
+
+/* our_picks 끝 */
+
+
+/* footer 시작 */
+footer { width: 100%; height: 475px; margin-top: 344px; display: flex; flex-wrap: wrap; flex-direction: column; align-items: center; justify-content: center; background-color: #FFB800; }
+
+.footer_wrap { width: 100%; height: 427px; display: flex; justify-content: center; align-items: center; gap: 295px; }
+
+.footer_logo_wrap { display: flex; flex-wrap: wrap; flex-direction: column; justify-content: center; align-items: center; gap: 8px; }
+
+.footer_nav_wrap { width: 523px; display: flex; gap: 85px; }
+
+.footer_nav_wrap ul { display: flex; flex-direction: column; gap: 10px; }
+
+.footer_nav_wrap .contents_article_small_bold { color: #fff; }
+
+.footer_logo_wrap .contents_article_medium { color: #fff;}
+
+.footer_sns_wrap { width: 100%; height: 48px; margin-top: auto; display: flex; align-items: center; justify-content: center; box-sizing: border-box; border-top: 1px solid #fff; gap: 22px; }
+
+.footer_sns_wrap .contents_article_xsmall { color: #fff; }
+
+.footer_sns_icons { display: flex; align-items: center; justify-content: center; gap: 15px; }
+
+.footer_sns_icons img { display: block; }
+
+/* footer 끝 */
 

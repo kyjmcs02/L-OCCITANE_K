@@ -4,9 +4,25 @@
 header { 
     width: 100%; height: 84px; padding: 28px 40px; position: fixed; top: 0;
     display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
-     z-index: 999; /* background-color: lightcoral; */ box-sizing: border-box;/* 패딩값을 안쪽에만 주고싶으면, 박스사이징 보더박스 설정해야함 */
-    }
+    z-index: 999; box-sizing: border-box;
+    background-color: transparent; 
+    /* 추가: 배경색 변화를 부드럽게 */
+    transition: background-color 0.4s ease;
+}
 
+header.scrolled {
+    /* 아주 연한 크림색 느낌의 배경 */
+    background-color: rgba(250, 248, 243, 0.85) !important; 
+    
+    /* 블러 효과로 답답함 제거 */
+    backdrop-filter: blur(8px);
+    
+    /* 그림자를 아주 은은하게 (너무 진하면 답답함) */
+    box-shadow: 0 4px 15px rgba(180, 160, 140, 0.1);
+    
+    /* 헤더 하단에 아주 얇은 라인을 넣어 정돈된 느낌 */
+    border-bottom: 1px solid rgba(180, 160, 140, 0.2);
+}
 .heder_gnb_left { display:flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: center; }
 .heder_gnb_left img, .heder_gnb_right img { display: block; }
 /* .heder_gnb_left a { line-height: 0; } */
